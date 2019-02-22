@@ -5,8 +5,8 @@ class MessageLookupEn extends MessageLookupByLibrary {
   get localeName => 'en';
 
   final messages = {
-    "hello": MessageLookupByLibrary.simpleMessage("Hello"),
-    "your_locale": MessageLookupByLibrary.simpleMessage("Your locale is"),
+    "hello": () => "Hello",
+    "your_locale": () =>"Your locale is",
     "total_items": (count) => totalItems(count),
   };
 
@@ -15,5 +15,3 @@ class MessageLookupEn extends MessageLookupByLibrary {
     return "Total $count $unit.";
   }
 }
-
-
